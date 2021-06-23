@@ -15,7 +15,6 @@ def sum():
             if input("Write 'q' to Exit\n") == 'q':
                 break
 
-
 def minus():
     while True:
         try:
@@ -25,14 +24,12 @@ def minus():
 
             for value in liste:
                 minResult -= value
-
             return minResult
 
         except ValueError:
             print("Input is no value\n")
             if input("Write 'q' to Exit\n") == 'q':
                 break
-
 
 def multiple():
     while True:

@@ -9,6 +9,6 @@ class Main():
         wCount = Wcounter(self.filePath)
         print(wCount.count_words())
 
-newMain = Main()
 
+newMain = Main()
 newMain.countFile()

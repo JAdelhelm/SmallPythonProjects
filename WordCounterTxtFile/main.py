@@ -1,3 +1,14 @@
-import loadFile, wordCounter
+from wordCounter import *
+from file import *
 
-print(wordCounter.count_words("This is a test sentence is is is yes oh no git"))
+class Main():
+    def __init__(self):
+        self.filePath = File().filePath
+
+    def countFile(self):
+        wCount = Wcounter(self.filePath)
+        print(wCount.count_words())
+
+newMain = Main()
+
+newMain.countFile()

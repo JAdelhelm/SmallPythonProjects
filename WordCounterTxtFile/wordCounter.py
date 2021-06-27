@@ -1,20 +1,25 @@
 import re
 from collections import Counter
 
-def count_words(sentence):
-    sentence = sentence.lower()
-    sentence = re.sub(r"[!&@$%^.:]","",sentence)
-    sentence = sentence.replace("_"," ")
-    sentence = sentence.replace(","," ").split()
-    sentence = removeQutation(sentence)
-    return Counter(sentence)
+class Wcounter():
+    def __init__(self, sentence):
+        self.sentence = sentence
+        #print("Wcounter: ",self.sentence)
 
-def removeQutation(sentence):
-    temp = []
-    for char in sentence:
-        if char.startswith('\'') or char.endswith('\''):
-            char = re.sub(r"\'","",char)
-            temp.append(char)
-        else:
-            temp.append(char)
-    return temp
+    def count_words(self):
+        self.sentence = self.sentence.lower()
+        self.sentence = re.sub(r"[!&@$%^.:]","",self.sentence)
+        self.sentence = self.sentence.replace("_"," ")
+        self.sentence = self.sentence.replace(","," ").split()
+        self.sentence = Wcounter(self.sentence).removeQutation()
+        return Counter(self.sentence)
+
+    def removeQutation(self):
+        temp = []
+        for char in self.sentence:
+            if char.startswith('\'') or char.endswith('\''):
+                char = re.sub(r"\'","",char)
+                temp.append(char)
+            else:
+                temp.append(char)
+        return temp

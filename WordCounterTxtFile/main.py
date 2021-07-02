@@ -1,9 +1,10 @@
 from wordCounter import *
-from loadFile import *
+from fileHandling import *
 
 class Main():
-    def __init__(self):
-        self.file = LoadFile().readFile()
+    def __init__(self, filePath="alice.txt"):
+        self.filePath = filePath
+        self.file = ReadFile.readFile()
 
     def countFile(self):
         wCount = Wcounter(self.file)

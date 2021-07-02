@@ -1,10 +1,8 @@
-class LoadFile():
-    def __init__(self, filePath="Add FilePath"):
-        self.filePath = str(input("Add filePath:"))
+class ReadFile():
+    def __init__(self, filePath):
+        self.filePath = filePath
 
     def readFile(self):
-        # if len(self.filePath) == 0:
-        #     self.filePath = "alice.txt"
         try:
             with open(self.filePath) as file_object:
                 contents = file_object.read()

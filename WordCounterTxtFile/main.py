@@ -1,12 +1,12 @@
 from wordCounter import *
-from file import *
+from loadFile import *
 
 class Main():
     def __init__(self):
-        self.filePath = File().filePath
+        self.file = LoadFile().readFile()
 
     def countFile(self):
-        wCount = Wcounter(self.filePath)
+        wCount = Wcounter(self.file)
         print(wCount.count_words())
 
 

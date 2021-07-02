@@ -1,5 +1,5 @@
 import os
-from wCounter import *
+from algorithm import *
 from fileHandling import *
 
 class Main():
@@ -15,6 +15,6 @@ class Main():
         print(wCount.count_words())
 
 
-firstMain = Main()
+firstMain = Main("alice.txt")
 firstMain.readFile()
 firstMain.countFile()

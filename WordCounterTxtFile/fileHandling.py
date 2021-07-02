@@ -1,20 +1,15 @@
-class fileHandling():
-
 """
-Class to handle the file to read.
+Class to handle the file.
 Next step is to implement options to handle .txt files """
 
-dicOptions = {
-1: "Add String",
-2: "Add FilePath"
-}
+class fileHandling():
 
     def __init__(self, filePath):
         self.filePath = filePath
 
     def readFile(self):
         if len(self.filePath) == 0:
-            optionsReadFile()
+            # optionsReadFile()
             self.filePath = str(input("Add filePath:\n"))
         try:
             contents = ""
@@ -27,4 +22,7 @@ dicOptions = {
             print("FilePath is incorrect")
 
     def optionsReadFile(self):
-        pass
+        dicOptions = {
+        1: "Add String",
+        2: "Add FilePath"
+        }

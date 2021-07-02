@@ -1,5 +1,6 @@
 import re
 from collections import Counter
+import itertools
 
 class Wcounter():
     def __init__(self, sentence):
@@ -12,7 +13,10 @@ class Wcounter():
         self.sentence = self.sentence.replace("_"," ")
         self.sentence = self.sentence.replace(","," ").split()
         self.sentence = Wcounter(self.sentence).removeQutation()
-        return Counter(self.sentence)
+        dictWords = dict(Counter(self.sentence))
+        dictWords = dict(itertools.islice(dictWords.items(),50))
+        dictWords = sorted(dictWords.items(), key=lambda x: x[1], reverse=True)
+        return dictWords
 
     def removeQutation(self):
         temp = []

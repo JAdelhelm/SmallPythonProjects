@@ -8,7 +8,6 @@ class Main():
         self.file = ""
 
     def readFile(self):
-        # encoding Problem
         self.file = fileHandling(self.filePath).readFile()
 
     def countFile(self):
@@ -16,6 +15,6 @@ class Main():
         print(wCount.count_words())
 
 
-firstMain = Main("alice.txt")
+firstMain = Main()
 firstMain.readFile()
 firstMain.countFile()

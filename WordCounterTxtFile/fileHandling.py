@@ -1,4 +1,4 @@
-class ReadFile():
+class fileHandling():
     def __init__(self, filePath):
         self.filePath = filePath
 

@@ -7,16 +7,20 @@ class Wcounter():
         self.sentence = sentence
         #print("Wcounter: ",self.sentence)
 
-    def count_words(self):
-        self.sentence = self.sentence.lower()
-        self.sentence = re.sub(r"[!&@$%^.:]","",self.sentence)
-        self.sentence = self.sentence.replace("_"," ")
-        self.sentence = self.sentence.replace(","," ").split()
-        self.sentence = Wcounter(self.sentence).removeQutation()
-        dictWords = dict(Counter(self.sentence))
-        dictWords = dict(itertools.islice(dictWords.items(),50))
-        dictWords = sorted(dictWords.items(), key=lambda x: x[1], reverse=True)
-        return dictWords
+    def countWords(self):
+        try:
+            self.sentence = self.sentence.lower()
+            self.sentence = re.sub(r"[!&@$%^.:]","",self.sentence)
+            self.sentence = self.sentence.replace("_"," ")
+            self.sentence = self.sentence.replace(","," ").split()
+            self.sentence = Wcounter(self.sentence).removeQutation()
+            dictWords = dict(Counter(self.sentence))
+            dictWords = dict(itertools.islice(dictWords.items(),50))
+            dictWords = sorted(dictWords.items(), key=lambda x: x[1], reverse=True)
+            return dictWords
+        except:
+            return ""
+
 
     def removeQutation(self):
         temp = []

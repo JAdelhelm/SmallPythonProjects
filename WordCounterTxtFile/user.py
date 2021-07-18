@@ -1,34 +1,20 @@
 import re
 import json
 
-class Articles():
+class Username():
     def __init__(self):
         pass
 
-    def get_stored_username(self):
-        """Get stored username if available."""
-        filename = 'username.json'
+    def get_user(self):
         try:
-            with open(filename) as f_obj:
-                username = json.load(f_obj)
-        except FileNotFoundError:
-            return None
-        else:
-            return username
-
-    def get_new_username(self):
-        """Prompt for a new username."""
-        username = input("What is your name? ")
-        filename = 'username.json'
-        with open(filename, 'w') as f_obj:
-            json.dump(username, f_obj)
-        return username
-
-    def greet_user(self):
-        """Greet the user by name."""
-        username = get_stored_username()
-        if username:
-            print("Welcome back, " + username + "!")
-        else:
-            username = get_new_username()
-            print("We'll remember you when you come back, " + username + "!")
+            with open('username.json') as file:
+                username = json.load(file).title()
+            option = input(f"Are you {username}? Y or N\n")
+            if option == 'N':
+                raise Exception
+            else:
+                print(f"Hi {username}, welcome back!\n")
+        except:
+            username = input("What is your name?\n")
+            with open('username.json','w') as file:
+                json.dump(username, file)

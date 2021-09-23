@@ -20,10 +20,11 @@ class Wcounter():
             print("\nSum of Words: ",allWords,"\n")
             print("Showing first sorted 50 words:\n")
             dictWords = dict(Counter(self.sentence))
-            dictWords = dict(itertools.islice(dictWords.items(),50))
+            # dictWords = dict(itertools.islice(dictWords.items(),50))
             dictWords = sorted(dictWords.items(), key=lambda x: x[1], reverse=True)
-            print(dictWords)
-            # return dictWords
+            # dictWords = dictWords[:50]
+            print(dictWords[:50])
+            return dictWords
         except:
             return ""
 

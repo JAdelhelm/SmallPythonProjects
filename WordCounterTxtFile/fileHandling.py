@@ -12,10 +12,11 @@ class fileHandling():
         try:
             if len(self.filePath) == 0:
                 # optionsReadFile()
-                self.filePath = str(input("Add filePath:\n"))
+                self.filePath = str(input("Add filePath: "))
             contents = ""
+            print("Dateipfad: ",self.filePath)
             # encoding Problem
-            with open(self.filePath,"r+", encoding="utf-8") as file_object:
+            with open(self.filePath,"r+") as file_object:
                 for line in file_object:
                     contents += line
             return contents

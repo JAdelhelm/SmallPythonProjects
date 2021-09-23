@@ -3,26 +3,22 @@ from algorithm import *
 from fileHandling import *
 from user import Username
 from visualization import visualizeData
+import time
 #from user import *
 #from findArticles import *
 
 class Main():
     def __init__(self,filePath=""):
         self.filePath = filePath
-    # To safe usernames
-        #Username().get_user()
-    # To Read the File
         self.file = fileHandling(self.filePath).readFile()
-    # To count the Words
-        self.wCount = Wcounter(self.file)
+    # Count words in Wcounter class
+    # Returns a list with tuples
+        self.wCount = Wcounter(self.file).countWords()
+        # time.sleep(10)
 
-    def countFile(self):
-        listOfCountedWords = self.wCount.countWords()
-
-        # Sort list after most called words
     def visualizeDataset(self):
         try:
-            if len(self.wCount.words) == 0:
+            if len(self.wCount) == 0:
                 raise Exception
             visual = visualizeData(self.wCount)
         except:
@@ -35,5 +31,4 @@ class Main():
 
 
 firstMain = Main()
-firstMain.countFile()
 firstMain.visualizeDataset()

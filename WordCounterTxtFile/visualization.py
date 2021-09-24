@@ -11,14 +11,12 @@ class visualizeData():
         self.numList = []
         self.getArrays(self.dataset)
         print("Sum of all words: ", self.sumOfAllwords)
-        
-
         self.plot_set()
 
     def plot_set(self):
         fig, ax = plt.subplots()
         # Slice first 20 of dataset
-        options = str(input("Do you like to see the results in percent? (Y/N): "))
+        options = str(input("Do you like to see the results in percent? (Y/N): ")).upper()
         if options == "Y":
             # Percentage of Data
             percentageData = [(val/self.sumOfAllwords)*100 for val in self.numList]
@@ -28,15 +26,17 @@ class visualizeData():
             ax.set_xlabel("Words")
             ax.tick_params(axis='both',labelsize=8)
             plt.show()
-        else:
+        elif options == "N":
             # Normal way
-            ax.plot(self.wordList[:20],self.numList[:20])
+            ax.plot(self.wordList[:30],self.numList[:30])
             ax.set_title("Most 20 frequent words")
             ax.set_ylabel("Words")
             ax.set_xlabel("Frequence")
             # Schriftgröße der Achsen des Diagramms
             ax.tick_params(axis='both',labelsize=8)
             plt.show()
+        else:
+            print("Your input was invalid")
 
     def getArrays(self, listOfWords):
         for i in listOfWords:

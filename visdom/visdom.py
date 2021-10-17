@@ -1,10 +1,11 @@
+import re
+from pathlib import Path
 import collections
 import matplotlib.pyplot as plt
-import collections
 
-# Creates an object to visualize the data
+
 class visualizeData():
-    def __init__(self,dataset, numWords):
+    def __init__(self,dataset, numWords=20):
         self.dataset = dataset
         self.numWords = numWords
         self.sumOfAllWords = sum(self.dataset.values())
@@ -45,6 +46,37 @@ class visualizeData():
                 self.numList.append(k)
             break
 
+class visdom():
+    def __init__(self):
+        pass
+    def readTxt(self):
+        try:
+            inputPath = str(input("Add filepath: "))
+            filePath = Path(inputPath).resolve()
+            content = open(filePath, "r").read()
+            return content
+        except:
+            try:
+                contentEngl = open(filePath, "r", encoding='utf-8').read()  
+                return contentEngl
+            except:
+                print("FilePath is incorrect")
+                raise NameError
 
-            # print("\nSum of Words: ",allWords,"\n")
-            # print(f"Showing first {self.numberWords} sorted words:\n{dictWords.most_common(self.numberWords)}\n")
+    def prepare(self, content):
+        try:
+            content = content.lower()
+            content = re.sub(r"[!&@$%^.:]","",content)
+            content = re.sub(r"[-,\\]"," ",content).split()
+            dictWords = collections.Counter(content)
+            return dictWords
+        except: return ""
+
+visObject = visdom()
+content = visObject.readTxt()
+content = visObject.prepare(content)
+
+# Visualize
+newVisualization = visualizeData(dataset=content,numWords=5)
+
+    

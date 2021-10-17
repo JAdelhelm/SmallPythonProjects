@@ -6,7 +6,7 @@ class fileHandling():
 
     def readFile(self):
         try:
-            inputPath = str(input("Add filePath: "))
+            inputPath = str(input("Add filepath: "))
             filePath = Path(inputPath).resolve()
             content = open(filePath, "r").read()
             return content

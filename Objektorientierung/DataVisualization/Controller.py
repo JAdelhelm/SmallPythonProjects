@@ -1,25 +1,17 @@
 """Manages user interactions and parse them
 to Model and View"""
 
-from pathlib import Path
 import re
-import itertools
 
 class Controller():
-    def __init__(self):
+    def __init__(self,filepath="alice.txt"):
         super().__init__()
+        self.filepath = filepath
         self.file = self.processedData()
-        self.items = self.numberOfData()
-
-    def numberOfData(self):
-        try:
-            numberToAnalyse = int(input("How many data do you want to visualize?\n"))
-            return numberToAnalyse
-        except:
-            raise Exception("Your input was not a number")
+        self.n = 0
 
     """Reads the file and parse it into a string instance"""
-    def readData(self, filepath=""):
+    def readData(self,filepath):
         while len(filepath) == 0:
             filepath = str(input("Insert your filepath: \n"))
         try:
@@ -30,13 +22,12 @@ class Controller():
             print("Wrong filepath")
 
     """Process data, remove unnecessary characters and split words
-    transform string into a list"""
-    def processedData(self):
-        content = self.readData()
-        content = re.sub(r"[!&@$%^.:]","",content)
-        content = re.sub(r"[-,\\]"," ",content).split()
+    transform string into a list
+    --> Takes input file from readData"""
+    def processedData(self,inputData=""):
+        content = re.sub(r"[!&@$%^.:]","",inputData)
+        content = re.sub(r"[-,\\]"," ",inputData).split()
         return content
-
 
 
 

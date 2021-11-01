@@ -3,8 +3,7 @@ to Model and View"""
 
 from pathlib import Path
 import re
-
-from numpy import number
+import itertools
 
 class Controller():
     def __init__(self):
@@ -20,7 +19,7 @@ class Controller():
             raise Exception("Your input was not a number")
 
     """Reads the file and parse it into a string instance"""
-    def readData(self, filepath="alice.txt"):
+    def readData(self, filepath=""):
         while len(filepath) == 0:
             filepath = str(input("Insert your filepath: \n"))
         try:
@@ -37,6 +36,9 @@ class Controller():
         content = re.sub(r"[!&@$%^.:]","",content)
         content = re.sub(r"[-,\\]"," ",content).split()
         return content
+
+
+
 
 
         

@@ -1,9 +1,9 @@
 """Is used to visualize graphs"""
 from Model import *
+from Controller import *
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-class View(Model):
+class View(Model, Controller):
     def __init__(self):
         super().__init__()
         self.sumOfItems = sum(self.getItems(self.items)[1])
@@ -21,7 +21,7 @@ class View(Model):
         if self.items > 3: explodePie = [0.2]+[0.2]+[0.2]+ [0 for val in range(3,self.items)]
         else: explodePie = [0 for val in range(0,self.items)]
         plt.pie(self.getItems(self.items)[1],labels=self.getItems(self.items)[0], shadow=True, startangle=90, explode=explodePie)
-        plt.xlabel(f"\nExploded items take {self.percentOfData} % of all data")
+        plt.xlabel(f"\nExploded items contain {self.percentOfData} % of all data")
         plt.show()
 
     def getItems(self, items):
@@ -33,6 +33,9 @@ class View(Model):
             listNums.append(num)
         return tuple(listWords), tuple(listNums)
 
-v = View()
-# v.graphVisualize()
-v.pieVisualize()
+if __name__ == "__main__":
+    print(__name__)
+    v = View()
+    # v.graphVisualize()
+    v.pieVisualize()
+

@@ -40,3 +40,4 @@ print()
 obst1.bananaGetSet = 3
 obst1.zeigeInhalt()
 # obst1.apfelEinlagern(40)
+

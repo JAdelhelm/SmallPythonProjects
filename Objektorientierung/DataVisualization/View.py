@@ -4,18 +4,21 @@ from Controller import *
 import matplotlib.pyplot as plt
 import pandas as pd
 import time, functools
+from typing import Optional
 class View(Model, Controller):
-    def __init__(self, filep="",nData=0):
+    def __init__(self, filep=None,nData=None):
         super().__init__()
+        if nData == None: nData=10
+        if filep == None: filep=""
         # Initialize different objects
         self.initialiseObjects(filePath=filep,nData=nData)
         
 
-    def graphVisualize(self):
+    def graphVisualize(self, name: Optional[str]=None):
         plt.plot(self.getItems(self.items)[0], self.getItems(self.items)[1])
         plt.xlabel("Words")
         plt.ylabel("Number")
-        plt.title("Visualization of data by Jörg Adelhelm")
+        if name != None: plt.title(f"Visualization of data by {name}")
         plt.show()
 
     def pieVisualize(self):
@@ -48,19 +51,20 @@ class View(Model, Controller):
             raise Exception("Your input was not a number")
 
     def initialiseObjects(self,filePath,nData=0):
-        readData = self.readData(filePath)
-        processedData = self.processedData(readData)
-        self.processedFile = collections.Counter(processedData)
+        readData: str = self.readData(filePath)
+        processedData: list = self.processedData(readData)
+        self.processedFile: dict = collections.Counter(processedData)
 
-        self.items = self.numberOfData(nData)
-        self.sumOfItems = sum(self.getItems(self.items)[1])
-        self.sumOfAllItems = sum(self.processedFile.values())
-        self.percentOfData = round((self.sumOfItems/self.sumOfAllItems)*100,2)
+        self.items: int = self.numberOfData(nData)
+        self.sumOfItems: int = sum(self.getItems(self.items)[1])
+        self.sumOfAllItems: int = sum(self.processedFile.values())
+        self.percentOfData: int = round((self.sumOfItems/self.sumOfAllItems)*100,2)
 
 
 
 if __name__ == "__main__":
     v = View("alice.txt",10)
-    # v.graphVisualize()  
+    # v.graphVisualize(name="Jörg Adelhelm")  
     v.pieVisualize()
+    # v.graphVisualize()
     

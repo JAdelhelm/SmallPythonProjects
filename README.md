@@ -3,7 +3,14 @@
 <!-- - Next step is to make a GUI to get the filepath of the data -->
 The project is used to analyse words in text files. The future idea is to extend the features with a GUI and PDF-Converter to text.
 - Download DataVisualization
-- Run View.py
+- Run Main.py
+  - Arguments:
+  - -f "filepath"
+  - -c "charttype"
+  - -w words(int) to analyse
+  - -n "name" of person who makes the visualization
+
+Example: python Main.py -f "alice.txt" -c "pie" -w 20 -n "Adelhelm"
 
 <!-- 🔴🟠🟡🟢🔵🟣🟤⚫⚪🔘🛑⭕!
 

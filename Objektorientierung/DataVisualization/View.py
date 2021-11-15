@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import time, functools
 from typing import Optional
+
+
 class View(Model, Controller):
     def __init__(self, filep=None,nData=None):
         super().__init__()
@@ -21,13 +23,14 @@ class View(Model, Controller):
         if name != None: plt.title(f"Visualization of data by {name}")
         plt.show()
 
-    def pieVisualize(self):
+    def pieVisualize(self, name: Optional[str]=None):
         start = time.perf_counter()
 
         if self.items > 3: explodePie = [0.2]+[0.2]+[0.2]+ [0 for val in range(3,self.items)]
         else: explodePie = [0 for val in range(0,self.items)]
         plt.pie(self.getItems(self.items)[1],labels=self.getItems(self.items)[0], shadow=True, startangle=90, explode=explodePie)
         plt.xlabel(f"\nExploded items contain {self.percentOfData} % of all data")
+        if name != None: plt.title(f"Visualization of data by {name}")
         
         print(f"It took {round(time.perf_counter()-start,2)} seconds to visualize the file")
         plt.show()
@@ -62,9 +65,3 @@ class View(Model, Controller):
 
 
 
-if __name__ == "__main__":
-    v = View("alice.txt",10)
-    # v.graphVisualize(name="Jörg Adelhelm")  
-    v.pieVisualize()
-    # v.graphVisualize()
-    

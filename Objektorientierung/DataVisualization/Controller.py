@@ -3,13 +3,15 @@ to Model and View"""
 
 import re
 from typing import List, Dict
+import sys
+
+
 
 class Controller():
     def __init__(self,filepath="alice.txt"):
         super().__init__()
         self.filepath = filepath
         self.file: List[str] = self.processedData()
-        self.n = 0
 
     """Reads the file and parse it into a string instance
     Annotation str that says that a str of data will be returned"""

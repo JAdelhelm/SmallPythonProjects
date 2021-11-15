@@ -9,6 +9,7 @@ class Model(Controller):
         super().__init__()
         print(f"Welcome, today is the {time.gmtime().tm_mday}.{time.gmtime().tm_mon}.{time.gmtime().tm_year} \
 and its {time.localtime().tm_hour}:{time.localtime().tm_min}:{time.localtime().tm_sec}")
+        print(f"Running process with PID {os.getpid()}, on {sys.platform}")
         
 
     def tupleForVis(self, file):

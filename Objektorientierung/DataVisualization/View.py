@@ -16,14 +16,16 @@ class View(Model, Controller):
         self.initialiseObjects(filePath=filep,nData=nData)
         
 
-    def graphVisualize(self, name: Optional[str]=None):
+    def graphVisualize(self, name: Optional[str]=None,  output: Optional[str]=None):
         plt.plot(self.getItems(self.items)[0], self.getItems(self.items)[1])
         plt.xlabel("Words")
         plt.ylabel("Number")
         if name != None: plt.title(f"Visualization of data by {name}")
+        
+        if output != None: plt.savefig(output)
         plt.show()
 
-    def pieVisualize(self, name: Optional[str]=None):
+    def pieVisualize(self, name: Optional[str]=None, output: Optional[str]=None):
         start = time.perf_counter()
 
         if self.items > 3: explodePie = [0.2]+[0.2]+[0.2]+ [0 for val in range(3,self.items)]
@@ -33,7 +35,9 @@ class View(Model, Controller):
         if name != None: plt.title(f"Visualization of data by {name}")
         
         print(f"It took {round(time.perf_counter()-start,2)} seconds to visualize the file")
+        if output != None: plt.savefig(output)
         plt.show()
+        
        
 
     def getItems(self, items):

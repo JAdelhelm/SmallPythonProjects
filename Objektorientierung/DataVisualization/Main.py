@@ -1,8 +1,14 @@
 from View import *
 from argparse import ArgumentParser
 if __name__ == "__main__":
+    """Main class for argument parse in shell
+    Go to the python script directory, use follow syntax: python Main.py ...Arguments
+    Use -f to declare the filepath
+    Use -c to declare the chart type
+    Use -w to declare the number of words you want to analyze
+    Use -n to delcare the name of the creator
+    Use -s to declare the path to save the image of the visualization"""
     parser = ArgumentParser()
-    """Main class for argument parse in shell"""
     parser.add_argument("-f","--filepath",default="alice.txt",type=str)
     parser.add_argument("-c","--chart",default="pie", type=str)
     parser.add_argument("-w","--words",default=10, type=int)

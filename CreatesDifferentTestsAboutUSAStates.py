@@ -4,6 +4,8 @@ import random, time, re, os, sys
 from IPython.display import clear_output
 from pathlib import Path
 import pyinputplus as pyip
+import shutil
+
 capital=OrderedDict({
     'Alabama': 'Montgomery',
     'Alaska': 'Juneau',
@@ -152,6 +154,15 @@ class test:
         stud_read_Object = open(pathStudent+self.testNumber+".txt","a")
         stud_read_Object.write(f"\n{correctAnswers} // {self.nrTasks} correct answers")
         stud_read_Object.close()
+    def deleteFiles(self):
+        accepted = r"yes|Yes|ja|Ja|JA|Oh ja|Ohhhh ja|Ja!!!"
+        inDel = pyip.inputStr("Wollen Sie alle erzeugten Daten wieder löschen?\n\n",
+        allowRegexes=accepted)
+        if inDel in accepted:
+            shutil.rmtree(f"{Path.cwd()}\\Test")
+            shutil.rmtree(f"{Path.cwd()}\\Solution")
+            shutil.rmtree(f"{Path.cwd()}\\Student")
+
         
         
  
@@ -159,9 +170,10 @@ class test:
         
 
 
-t = test(nrTasks=10)
+t = test(nrTasks=4)
 t.createTests()
 t.startName()
 t.startTest()
 t.validTest()
+t.deleteFiles()
     

@@ -1,0 +1,14 @@
+Name of the Student: Joerg
+
+Boston
+Phoenix
+Lincoln
+Indianapolis
+Concord
+Springfield
+Carson City
+Raleigh
+Boston
+Boston
+
+4 // 10 correct answers

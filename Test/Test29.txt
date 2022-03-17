@@ -1,0 +1,152 @@
+This is a test from 
+
+Aufgabe 0 : Was ist der Bundestaat von Indiana?
+['Annapolis' 'Oklahoma City' 'Indianapolis' 'Charleston']
+
+Aufgabe 1 : Was ist der Bundestaat von South Dakoda?
+['Boston' 'Salt Lake City' 'Pierre' 'Honolulu']
+
+Aufgabe 2 : Was ist der Bundestaat von Minnesota?
+['Honolulu' 'St. Paul' 'Helena' 'Cheyenne']
+
+Aufgabe 3 : Was ist der Bundestaat von Alaska?
+['Salem' 'Juneau' 'Lincoln' 'Charleston']
+
+Aufgabe 4 : Was ist der Bundestaat von Arkansas?
+['Madison' 'Little Rock' 'Baton Rouge' 'Juneau']
+
+Aufgabe 5 : Was ist der Bundestaat von Connecticut?
+['Santa Fe' 'Hartford' 'Jefferson City' 'Jackson']
+
+Aufgabe 6 : Was ist der Bundestaat von Illinios?
+['Santa Fe' 'Springfield' 'Raleigh' 'Lincoln']
+
+Aufgabe 7 : Was ist der Bundestaat von Iowa?
+['Lincoln' 'Des Monies' 'Tallahassee' 'Richmond']
+
+Aufgabe 8 : Was ist der Bundestaat von Vermont?
+['Pierre' 'Montpelier' 'Harrisburg' 'Honolulu']
+
+Aufgabe 9 : Was ist der Bundestaat von Maine?
+['Augusta' 'Juneau' 'Pierre' 'Springfield']
+
+Aufgabe 10 : Was ist der Bundestaat von South Carolina?
+['Charleston' 'Columbia' 'St. Paul' 'Boston']
+
+Aufgabe 11 : Was ist der Bundestaat von Kentucky?
+['Indianapolis' 'Frankfort' 'Bismarck' 'Boise']
+
+Aufgabe 12 : Was ist der Bundestaat von Maryland?
+['Salem' 'Annapolis' 'Dover' 'Denver']
+
+Aufgabe 13 : Was ist der Bundestaat von New York?
+['Little Rock' 'Albany' 'Lansing' 'Jackson']
+
+Aufgabe 14 : Was ist der Bundestaat von Wisconsin?
+['Sacramento' 'Topeka' 'Des Monies' 'Madison']
+
+Aufgabe 15 : Was ist der Bundestaat von Wyoming?
+['Cheyenne' 'Denver' 'Richmond' 'Frankfort']
+
+Aufgabe 16 : Was ist der Bundestaat von Ohio?
+['Richmond' 'Lincoln' 'Columbus' 'Cheyenne']
+
+Aufgabe 17 : Was ist der Bundestaat von Colorado?
+['Jackson' 'Denver' 'Helena' 'Carson City']
+
+Aufgabe 18 : Was ist der Bundestaat von Delaware?
+['Olympia' 'Madison' 'Madison' 'Dover']
+
+Aufgabe 19 : Was ist der Bundestaat von Idaho?
+['Helena' 'Boise' 'St. Paul' 'Baton Rouge']
+
+Aufgabe 20 : Was ist der Bundestaat von West Virginia?
+['Raleigh' 'Columbus' 'Charleston' 'Charleston']
+
+Aufgabe 21 : Was ist der Bundestaat von Neveda?
+['Charleston' 'Honolulu' 'Carson City' 'Augusta']
+
+Aufgabe 22 : Was ist der Bundestaat von Mississippi?
+['Juneau' 'Sacramento' 'Raleigh' 'Jackson']
+
+Aufgabe 23 : Was ist der Bundestaat von Maryland?
+['Annapolis' 'Charleston' 'Dover' 'Montpelier']
+
+Aufgabe 24 : Was ist der Bundestaat von Massachusetts?
+['Lincoln' 'Boston' 'Phoenix' 'Topeka']
+
+Aufgabe 25 : Was ist der Bundestaat von Arizona?
+['Boston' 'Albany' 'Phoenix' 'Trenton']
+
+Aufgabe 26 : Was ist der Bundestaat von Minnesota?
+['Raleigh' 'St. Paul' 'Frankfort' 'Charleston']
+
+Aufgabe 27 : Was ist der Bundestaat von Utah?
+['Salt Lake City' 'Atlanta' 'Santa Fe' 'Indianapolis']
+
+Aufgabe 28 : Was ist der Bundestaat von Arizona?
+['Concord' 'Salt Lake City' 'Charleston' 'Phoenix']
+
+Aufgabe 29 : Was ist der Bundestaat von Nebraska?
+['Lincoln' 'Oklahoma City' 'Salt Lake City' 'Honolulu']
+
+Aufgabe 30 : Was ist der Bundestaat von Colorado?
+['Cheyenne' 'Indianapolis' 'Augusta' 'Denver']
+
+Aufgabe 31 : Was ist der Bundestaat von Florida?
+['Tallahassee' 'Pierre' 'Atlanta' 'Hartford']
+
+Aufgabe 32 : Was ist der Bundestaat von Illinios?
+['Albany' 'Springfield' 'Salt Lake City' 'Sacramento']
+
+Aufgabe 33 : Was ist der Bundestaat von Illinios?
+['Springfield' 'Helena' 'Annapolis' 'Little Rock']
+
+Aufgabe 34 : Was ist der Bundestaat von New Jersey?
+['Trenton' 'Topeka' 'Jefferson City' 'Charleston']
+
+Aufgabe 35 : Was ist der Bundestaat von Louisiana?
+['Des Monies' 'Richmond' 'Denver' 'Baton Rouge']
+
+Aufgabe 36 : Was ist der Bundestaat von Nebraska?
+['Lincoln' 'Montgomery' 'Lincoln' 'Boise']
+
+Aufgabe 37 : Was ist der Bundestaat von Oklahoma?
+['Cheyenne' 'Oklahoma City' 'Little Rock' 'Indianapolis']
+
+Aufgabe 38 : Was ist der Bundestaat von Minnesota?
+['St. Paul' 'Hartford' 'Dover' 'Columbus']
+
+Aufgabe 39 : Was ist der Bundestaat von South Carolina?
+['Columbia' 'Little Rock' 'Dover' 'Salt Lake City']
+
+Aufgabe 40 : Was ist der Bundestaat von South Carolina?
+['Columbus' 'Columbus' 'Columbia' 'Charleston']
+
+Aufgabe 41 : Was ist der Bundestaat von Connecticut?
+['Hartford' 'Olympia' 'Pierre' 'Trenton']
+
+Aufgabe 42 : Was ist der Bundestaat von Arkansas?
+['Helena' 'Des Monies' 'Little Rock' 'Little Rock']
+
+Aufgabe 43 : Was ist der Bundestaat von Kentucky?
+['Frankfort' 'Olympia' 'Jefferson City' 'Denver']
+
+Aufgabe 44 : Was ist der Bundestaat von Idaho?
+['Boise' 'Raleigh' 'Pierre' 'Topeka']
+
+Aufgabe 45 : Was ist der Bundestaat von Utah?
+['Concord' 'Denver' 'Salt Lake City' 'Jefferson City']
+
+Aufgabe 46 : Was ist der Bundestaat von Michigan?
+['Lansing' 'Phoenix' 'Harrisburg' 'Columbia']
+
+Aufgabe 47 : Was ist der Bundestaat von Wisconsin?
+['Salem' 'Lincoln' 'Denver' 'Madison']
+
+Aufgabe 48 : Was ist der Bundestaat von Maryland?
+['Annapolis' 'Providence' 'Jefferson City' 'Providence']
+
+Aufgabe 49 : Was ist der Bundestaat von Delaware?
+['Dover' 'Hartford' 'Columbia' 'Bismarck']
+

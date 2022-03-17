@@ -122,7 +122,7 @@ class test:
             print(fragenReg.findall(testText)[i])
             try:
                 antworten_N = list(set(antworten_N))
-                checkS = pyip.inputMenu(choices=antworten_N, timeout=4, limit=2)
+                checkS = pyip.inputMenu(choices=antworten_N, lettered = True, timeout=4, limit=2)
             except pyip.TimeoutException:
                 checkS = ""
             except pyip.RetryLimitException:

@@ -1,0 +1,14 @@
+Name of the Student: Jörg
+
+
+Frankfort
+Richmond
+Phoenix
+Hartford
+Austin
+Boston
+Richmond
+Pierre
+Frankfort
+
+1 // 10 correct answers

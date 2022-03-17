@@ -1,0 +1,14 @@
+Name of the Student: gfgdf
+
+
+
+
+Lansing
+Lincoln
+Salem
+Columbus
+Annapolis
+Pierre
+Boston
+
+2 // 10 correct answers
